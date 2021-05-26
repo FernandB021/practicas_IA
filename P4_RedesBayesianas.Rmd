@@ -93,7 +93,7 @@ estructura <- empty.graph(c("alto_hc", "alto_hg", "deporte"))
 modelstring(estructura) <- "[alto_hc][deporte][alto_hg|deporte:alto_hc]"
 
 # Función para graficar la red usando el paquete visNetwork
-plot.network <- function(estructura, ht = "400px"){
+plot.network <- function(estructura, ht = "100px"){
   nodos.uniq <- unique(c(estructura$arcs[,1], estructura$arcs[,2]))
   nodos <- data.frame(id = nodos.uniq,
                       label = nodos.uniq,
@@ -144,7 +144,7 @@ Uno de las principales ventajas de las redes Bayesianas es que podemos cambiar e
 
 ```{r}
 set.seed(1)
-cat("P(entrena waterpolo | alto nivel hemoglobina y tiene alta tasa de hematocrito) =", cpquery(bn.mod, (deporte=="W_Polo"), (alto_hg == "TRUE" & alto_hc == "TRUE"), n=1000000))
+cat("P(entrena waterpolo | alto nivel hemoglobina y tiene alta tasa de hematocrito) =", cpquery(bn.mod, (deporte=="W_Polo"), (alto_hg == "TRUE" & alto_hc == "TRUE"), n=100000))
 ```
 
 Supongamos que no concemos la tasa de hematocrito del atleta, ¿podríamos calcular la probabilidad de que tenga niveles altos de hemoglobina dado que entrena waterpolo? Lo podemos calcular si solo sumamos la distribución de probabilidad de hematocrito. Afortunadamente, la función `cpquery` se encarga de esto.
