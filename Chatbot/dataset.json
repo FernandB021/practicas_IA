@@ -1,0 +1,20 @@
+{"dataset":[
+	{"tag": "hola",
+	 "patterns": ["Hola", "Que tal", "Saludos" ],
+	 "responses": ["Hola", "Bueno verte de nuevo", "Hola, en que te puedo ayudar?"],
+	 "context_set": ""
+	},
+	{"tag": "adios",
+	 "patterns": ["Adios", "chao", "Nos vemos", "Hasta luego" ],
+	 "responses": ["Adios", "Que tengas un lindo dia", "Chao! te veo luego"]
+	},
+	{"tag": "gracias",
+	 "patterns": ["Gracias", "Muchas gracias", "Te agradezco"],
+	 "responses": ["Feliz de ayudar", "Es un placer", "Cuando quieras!"]	
+	},
+	{"tag": "como_estas",
+	 "patterns": ["Como estas", "Como te va" ],
+	 "responses": ["Estoy bien", "Me siento muy bien"]
+	}
+  ]
+}
